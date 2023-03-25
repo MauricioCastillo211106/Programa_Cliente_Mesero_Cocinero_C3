@@ -13,10 +13,9 @@ public class HelloController implements Observer {
     @FXML
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
-
+        System.out.println("hola");
 
     }
-
     @Override
     public void update(Observable o, Object arg) {
 
