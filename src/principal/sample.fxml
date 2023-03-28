@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="1294.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="131.0" layoutX="765.0" layoutY="414.0" stroke="#ffffff75" strokeType="INSIDE" strokeWidth="2.0" style="-fx-stroke-dash-array: 2 12 12 2;" width="131.0" />
+      <Button fx:id="btnInit" layoutX="43.0" layoutY="603.0" mnemonicParsing="false" onAction="#IniciarAnimacion" style="-fx-background-color: yellowgreen; -fx-background-radius: 30;" text="Iniciar" textFill="WHITE" />
+      <Button fx:id="BtnSalir" layoutX="119.0" layoutY="603.0" mnemonicParsing="false" onAction="#Finalizar" style="-fx-background-color: red; -fx-background-radius: 30;" text="Terminar" textFill="WHITE" />
+      <ProgressBar fx:id="progressBarTotal" layoutX="110.0" layoutY="56.0" prefHeight="18.0" prefWidth="291.0" progress="0.0" />
+      <Label layoutX="162.0" layoutY="14.0" text="Clientes atendidos">
+         <font>
+            <Font name="Dosis ExtraLight" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtPercentage" layoutX="196.0" layoutY="81.0" text="0 %">
+         <font>
+            <Font name="Dosis ExtraLight" size="23.0" />
+         </font></Label>
+      <Rectangle fx:id="table3" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="662.0" layoutY="73.0" stroke="#ffffff00" strokeType="INSIDE" width="66.0" />
+      <Rectangle fx:id="table4" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="764.0" layoutY="73.0" stroke="#ffffff00" strokeType="INSIDE" width="64.0" />
+      <Rectangle fx:id="table1" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="474.0" layoutY="73.0" stroke="#ffffff00" strokeType="INSIDE" width="66.0" />
+      <Rectangle fx:id="table5" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="475.0" layoutY="156.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <Rectangle fx:id="table2" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="570.0" layoutY="73.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <Text fill="WHITE" layoutX="808.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COCINA" textAlignment="CENTER" wrappingWidth="6.64404296875" />
+      <Circle fx:id="chef" fill="#b2b2b2" layoutX="1226.0" layoutY="247.0" radius="15.0" stroke="#ffffff00" strokeType="INSIDE" />
+      <Text fill="WHITE" layoutX="776.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Área Reservada">
+         <font>
+            <Font name="Dosis ExtraLight" size="19.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a4988e" height="200.0" layoutX="317.0" layoutY="231.0" stroke="TRANSPARENT" strokeType="INSIDE" width="30.0" />
+      <Text fill="WHITE" layoutX="63.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clientes">
+         <font>
+            <Font name="Dosis ExtraLight" size="19.0" />
+         </font>
+      </Text>
+      <Circle fx:id="waiter" fill="#b0b0b0" layoutX="1067.0" layoutY="325.0" radius="15.0" stroke="#ae747400" strokeType="INSIDE" />
+      <Label fx:id="lblwaiter" layoutX="982.0" layoutY="277.0" prefHeight="18.0" prefWidth="100.0" />
+      <ImageView fitHeight="69.0" fitWidth="94.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Pizza_Cutter.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="69.0" fitWidth="94.0" layoutX="1186.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Pizza_Cutter.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="72.0" fitWidth="88.0" layoutX="14.0" layoutY="651.0" pickOnBounds="true" preserveRatio="true" rotate="260.0">
+         <image>
+            <Image url="@../../../../../../../Mau/sn%20(1)/sn/src/main/resources/Resource/imagen_2023-03-25_022418585-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="69.0" fitWidth="94.0" layoutX="1186.0" layoutY="649.0" pickOnBounds="true" preserveRatio="true" rotate="-167.0">
+         <image>
+            <Image url="@Resource/img/Pizza_Cutter.png" />
+         </image>
+      </ImageView>
+      <ImageView cache="true" fitHeight="80.0" fitWidth="50.0" layoutX="343.0" layoutY="297.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@Resource/img/Receptionist.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="410.0" layoutY="3.0" text="Restaurant Papa Louie">
+         <font>
+            <Font name="Dosis ExtraLight" size="39.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="500.0" fitWidth="150.0" layoutX="349.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@Resource/img/Wall.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="500.0" fitWidth="150.0" layoutX="349.0" layoutY="488.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@Resource/img/Wall.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="500.0" fitWidth="150.0" layoutX="349.0" layoutY="621.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@Resource/img/Wall.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="table6" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="570.0" layoutY="156.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <Rectangle fx:id="table7" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="663.0" layoutY="156.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <Rectangle fx:id="table8" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="766.0" layoutY="156.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <Rectangle fx:id="table9" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="475.0" layoutY="440.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <Rectangle fx:id="table10" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="570.0" layoutY="440.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <Rectangle fx:id="table11" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="663.0" layoutY="440.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <Rectangle fx:id="table12" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="764.0" layoutY="440.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <Rectangle fx:id="table13" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="475.0" layoutY="520.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <Rectangle fx:id="table14" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="570.0" layoutY="520.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <Rectangle fx:id="table15" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="663.0" layoutY="520.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <Rectangle fx:id="table16" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="762.0" layoutY="520.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <Rectangle fx:id="table17" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="475.0" layoutY="603.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <Rectangle fx:id="table18" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="570.0" layoutY="603.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <Rectangle fx:id="table19" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="663.0" layoutY="603.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <Rectangle fx:id="table20" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="762.0" layoutY="603.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
+      <ImageView fitHeight="12.0" fitWidth="149.0" layoutX="1226.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Wall.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="12.0" fitWidth="149.0" layoutX="1172.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Wall.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="12.0" fitWidth="149.0" layoutX="1118.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Wall.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="12.0" fitWidth="149.0" layoutX="1233.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Wall.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="12.0" fitWidth="149.0" layoutX="1186.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Wall.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="12.0" fitWidth="149.0" layoutX="1132.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Wall.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="12.0" fitWidth="149.0" layoutX="1091.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../../../../../../../Mau/sn%20(1)/sn/src/main/resources/Resource/imagen_2023-03-25_025128428-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="12.0" fitWidth="149.0" layoutX="1091.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../../../../../../../Mau/sn%20(1)/sn/src/main/resources/Resource/imagen_2023-03-25_025128428-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="12.0" fitWidth="149.0" layoutX="1091.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../../../../../../../Mau/sn%20(1)/sn/src/main/resources/Resource/imagen_2023-03-25_025128428-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="12.0" fitWidth="149.0" layoutX="1091.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../../../../../../../Mau/sn%20(1)/sn/src/main/resources/Resource/imagen_2023-03-25_025128428-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="12.0" fitWidth="149.0" layoutX="1091.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../../../../../../../Mau/sn%20(1)/sn/src/main/resources/Resource/imagen_2023-03-25_025128428-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="12.0" fitWidth="149.0" layoutX="1091.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../../../../../../../Mau/sn%20(1)/sn/src/main/resources/Resource/imagen_2023-03-25_025128428-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="12.0" fitWidth="149.0" layoutX="1112.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Wall.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="74.0" layoutX="1105.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+         <image>
+            <Image url="@Resource/img/Sink.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="1120.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Floor.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="1120.0" layoutY="395.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Floor.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="1119.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Floor.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="1120.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Floor.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="1119.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../Mau/sn%20(1)/sn/src/main/resources/Resource/descarga.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="1119.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../Mau/sn%20(1)/sn/src/main/resources/Resource/descarga.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="39.0" layoutX="1119.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Stove.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="39.0" layoutX="1119.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Stove.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="39.0" layoutX="1207.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/chef.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="74.0" fitWidth="41.0" layoutX="1013.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Waiter.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="474.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="569.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="662.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="763.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="474.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="569.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="662.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="765.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="474.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="569.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="662.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="763.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="474.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="569.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="662.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="761.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="474.0" layoutY="595.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="569.0" layoutY="595.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="662.0" layoutY="595.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="67.0" fitWidth="75.0" layoutX="761.0" layoutY="595.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Table.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="405.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="405.0" layoutY="485.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="410.0" layoutY="543.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="410.0" layoutY="603.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="405.0" layoutY="656.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="405.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="405.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="410.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="278.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="278.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="278.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="278.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="278.0" layoutY="395.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="444.0" layoutY="673.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="488.0" layoutY="673.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="541.0" layoutY="676.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="596.0" layoutY="673.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="656.0" layoutY="676.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="709.0" layoutY="676.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="757.0" layoutY="673.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="809.0" layoutY="673.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="857.0" layoutY="673.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="905.0" layoutY="673.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="64.0" layoutX="944.0" layoutY="673.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Decoration_Plant.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
