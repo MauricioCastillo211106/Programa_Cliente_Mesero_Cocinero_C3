@@ -31,14 +31,14 @@ public class Restaurant extends Observable {
         tableAux = -1;
         confirm=false;
         maxnumClient = 0;
-        tables = new boolean[26];
+        tables = new boolean[20];
 
-        for (int i=0; i<19; i++) {
+        for (int i=0; i<20; i++) {
             tables[i] = false;
         }
     }
 
-    public synchronized boolean reserved(String nombre){
+/*    public synchronized boolean reserved(String nombre){
         //Para el hilo cliente
         synchronized (this) {
             if(reservation){
@@ -56,25 +56,25 @@ public class Restaurant extends Observable {
                 return false;
             }
         }
-    }
+    }*/
 
     public int entry(String nombre){
         int numMesa = -1;
         try {
             if(reserved.equals(nombre)){
                 confirm = false;
-                numMesa = 19;
-                tableAux = 19;
+                numMesa = 20;
+                tableAux = 20;
             }else{
                 synchronized (this) {
                     numClient++;
                     maxnumClient++;
-                    while (maxnumClient==19) {
+                    while (maxnumClient==20) {
                         wait();
                     }
                     Access=true;
                     client=true;
-                    for (int i=0; i<19; i++) {
+                    for (int i=0; i<20; i++) {
                         if(!tables[i]) {
                             numMesa = i;
                             tableAux = i;

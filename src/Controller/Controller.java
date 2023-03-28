@@ -40,11 +40,7 @@ public class Controller implements Observer {
     @FXML
     private Label lblwaiter;
 
-    @FXML
-    private Circle chef;
 
-    @FXML
-    private Circle waiter;
 
 
 
@@ -88,16 +84,12 @@ public class Controller implements Observer {
                 String[] cadena = ((String) arg).split(" ");
                 int numMesa = Integer.parseInt(cadena[1]);
                 Platform.runLater(()-> lblwaiter.setText("Atendiendo: "+(numMesa+1)));
-                waiter.setFill(Color.RED);
             }else
             if (((String)arg).contains("libreMesero")){
                 Platform.runLater(()-> lblwaiter.setText(""));
-                waiter.setFill(Color.GREEN);
             }else
             if (((String)arg).contains("ocupado")){
-                chef.setFill(Color.RED);
             }else if(((String)arg).contains("libre")){
-                chef.setFill(Color.GREEN);
             }else
             if(((String)arg).contains("seat")) {
                 String[] cadena = ((String) arg).split(" ");

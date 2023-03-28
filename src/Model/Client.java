@@ -62,23 +62,7 @@ public class Client implements Runnable{
             }
             Platform.runLater(() -> imageView.setLayoutX(imageView.getLayoutX() + 50));
         }
-        boolean reservation = restaurant.reserved(Thread.currentThread().getName());
-        Image clientImage;
-        if (reservation) {
-            clientImage = new Image("file:principal/Resource/img/chef.png");
-        } else {
-            clientImage = new Image("file:principal/Resource/img/chef.png");
-        }
 
-        ImageView clientView = new ImageView(clientImage);
-        clientView.setFitWidth(30);
-        clientView.setFitHeight(30);
-
-        Platform.runLater(() -> {
-            clientView.setLayoutX(24);
-            clientView.setLayoutY(340);
-            anchor.getChildren().add(clientView);
-        });
 
         //Entrar
         int numMesa = restaurant.entry(Thread.currentThread().getName());
@@ -89,7 +73,7 @@ public class Client implements Runnable{
         });
 
         try {
-            Thread.sleep(100);
+            Thread.sleep(50);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -99,7 +83,7 @@ public class Client implements Runnable{
         restaurant.ordenar();
 
         try {
-            Thread.sleep(700);
+            Thread.sleep(100);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -114,11 +98,7 @@ public class Client implements Runnable{
 
         //Salir
 
-            Platform.runLater(() -> {
-                anchor.getChildren().remove(imageView);
-            });
-        restaurant.salir(numMesa);
-        System.out.println("Salio");
+
     }
     }
 
