@@ -1,12 +1,14 @@
 package Model;
 
 import javafx.application.Platform;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 public class Client implements Runnable{
-    private AnchorPane anchor;
+    private final AnchorPane anchor;
     private Restaurant restaurant;
     private static String[] positions;
     public Client(AnchorPane anchor, Restaurant restaurant){
@@ -42,55 +44,68 @@ public class Client implements Runnable{
     }
     @Override
     public void run() {
-        Circle client = new Circle(15, Color.rgb(180, 140, 140));
+        Image client = new Image(getClass().getResource("/principal/Resource/img/the-simpsons-homer-simpson.gif").toExternalForm());
+        ImageView imageView = new ImageView(client);
+        imageView.setFitWidth(50); // Establecer la anchura
+        imageView.setFitHeight(50); // Establecer la altura
         Platform.runLater(() -> {
-            client.setLayoutX(24);
-            client.setLayoutY(340);
-            anchor.getChildren().add(client);
+            imageView.setLayoutX(24);
+            imageView.setLayoutY(340);
+            anchor.getChildren().add(imageView);
         });
         //Avanzar
-        for(int i=0;i<5;i++){
+        for (int i = 0; i < 5; i++) {
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            Platform.runLater(()-> client.setLayoutX(client.getLayoutX()+50));
+            Platform.runLater(() -> imageView.setLayoutX(imageView.getLayoutX() + 50));
         }
         boolean reservation = restaurant.reserved(Thread.currentThread().getName());
-        if(reservation) {
-            Platform.runLater(()-> client.setFill(Color.rgb(180, 140, 179)));
+        Image clientImage;
+        if (reservation) {
+            clientImage = new Image("file:principal/Resource/img/chef.png");
+        } else {
+            clientImage = new Image("file:principal/Resource/img/chef.png");
         }
-        else {
-            Platform.runLater(()-> client.setFill(Color.rgb(180, 140, 140)));
-        }
+
+        ImageView clientView = new ImageView(clientImage);
+        clientView.setFitWidth(30);
+        clientView.setFitHeight(30);
+
+        Platform.runLater(() -> {
+            clientView.setLayoutX(24);
+            clientView.setLayoutY(340);
+            anchor.getChildren().add(clientView);
+        });
 
         //Entrar
         int numMesa = restaurant.entry(Thread.currentThread().getName());
         String[] layout = positions[numMesa].split(" ");
-        Platform.runLater(()-> {
-            client.setLayoutX(Integer.parseInt(layout[0]));
-            client.setLayoutY(Integer.parseInt(layout[1])+50);
+        Platform.runLater(() -> {
+            imageView.setLayoutX(Integer.parseInt(layout[0]));
+            imageView.setLayoutY(Integer.parseInt(layout[1]) + 50);
         });
 
         try {
-            Thread.sleep(500);
+            Thread.sleep(100);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         //Ordenar
-        Platform.runLater(()-> client.setFill(Color.BLUE));
+
         restaurant.ordenar();
 
         try {
-            Thread.sleep(500);
+            Thread.sleep(700);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         //Comer
-        Platform.runLater(()-> client.setFill(Color.YELLOW));
+
         try {
             restaurant.comer();
         } catch (InterruptedException e) {
@@ -98,8 +113,15 @@ public class Client implements Runnable{
         }
 
         //Salir
-        Platform.runLater(()-> client.setFill(Color.rgb(180, 140, 140)));
-        restaurant.salir(numMesa);
 
+            Platform.runLater(() -> {
+                anchor.getChildren().remove(imageView);
+            });
+        restaurant.salir(numMesa);
+        System.out.println("Salio");
     }
-}
+    }
+
+
+
+

@@ -20,7 +20,7 @@ public class CreateClient extends Random implements Runnable{
     private Client client;
     @Override
     public void run() {
-        for(int i=0;i<50;i++){
+        for(int i=0;i<100;i++){
             client =new Client(anchor,restaurant);
             Thread Hcliente = new Thread(client);
             Hcliente.setName("Client "+(i+1));

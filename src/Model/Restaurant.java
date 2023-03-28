@@ -99,7 +99,7 @@ public class Restaurant extends Observable {
     }
 
     public void servicioOrden(){
-        String txt = "libreMesero";
+        String txt;
         boolean aux = false;
         synchronized (this) {
             if (order<=0){

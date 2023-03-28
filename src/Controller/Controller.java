@@ -55,14 +55,12 @@ public class Controller implements Observer {
 
     @FXML
     void IniciarAnimacion(ActionEvent event) {
-        this.chef.setFill(Color.GREEN);
-        this.waiter.setFill(Color.GREEN);
         btnInit.setDisable(true);
         txtPercentage.setText("0 %");
         progressBarTotal.setProgress(0);
         System.out.println("Inicio de animacion");
         Restaurant restaurant = new Restaurant();
-        restaurant.addObserver(this::update);
+        restaurant.addObserver(this);
         Waiter waiter =new Waiter(anchor, restaurant);
         Receptionist receptionist =new Receptionist(restaurant);
         Chef chef = new Chef(restaurant);
@@ -108,7 +106,7 @@ public class Controller implements Observer {
             else {
                 int dato= Integer.parseInt((String)arg);
                 System.out.println("Observer "+dato);
-                double valor=dato*(0.02);
+                double valor=dato*(0.01);
                 Platform.runLater(()->  progressBarTotal.setProgress(valor));
                 int porciento= (int) (valor*100);
                 Platform.runLater(()-> txtPercentage.setText(porciento+" %"));
