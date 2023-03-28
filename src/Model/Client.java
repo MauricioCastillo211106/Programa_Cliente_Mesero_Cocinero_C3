@@ -73,7 +73,7 @@ public class Client implements Runnable{
         });
 
         try {
-            Thread.sleep(50);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -83,7 +83,7 @@ public class Client implements Runnable{
         restaurant.ordenar();
 
         try {
-            Thread.sleep(100);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -97,7 +97,11 @@ public class Client implements Runnable{
         }
 
         //Salir
+        restaurant.salir(numMesa);
 
+        Platform.runLater(() -> {
+            anchor.getChildren().remove(imageView);
+        });
 
     }
     }

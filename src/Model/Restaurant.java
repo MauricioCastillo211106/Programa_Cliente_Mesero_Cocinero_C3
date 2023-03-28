@@ -153,7 +153,7 @@ public class Restaurant extends Observable {
             wait();
         }
         food--;
-        Thread.sleep(5000);
+        Thread.sleep(1000);
     }
 
     public void salir(int numMesaLibre){
