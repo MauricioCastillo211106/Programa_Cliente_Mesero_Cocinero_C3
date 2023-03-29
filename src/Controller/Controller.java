@@ -40,17 +40,6 @@ public class Controller implements Observer {
     @FXML
     private Label lblwaiter1;
 
-    @FXML
-    private Label lblwaiter2;
-
-    @FXML
-    private Label lblwaiter3;
-
-    @FXML
-    private Label lblwaiter4;
-
-    @FXML
-    private Label lblwaiter5;
 
 
 
@@ -75,18 +64,6 @@ public class Controller implements Observer {
         hiloWaiter.setDaemon(true);
         hiloWaiter.start();
 
-
-        Thread hiloWaiter2 = new Thread(waiter);
-        hiloWaiter2.setDaemon(true);
-        hiloWaiter2.start();
-
-        Thread hiloWaiter3 = new Thread(waiter);
-        hiloWaiter3.setDaemon(true);
-        hiloWaiter3.start();
-
-        Thread hiloWaiter4 = new Thread(waiter);
-        hiloWaiter4.setDaemon(true);
-        hiloWaiter4.start();
 
         Receptionist receptionist =new Receptionist(restaurant);
         Chef chef = new Chef(restaurant);
@@ -124,7 +101,6 @@ public class Controller implements Observer {
                 String[] cadena = ((String) arg).split(" ");
                 int numMesa = Integer.parseInt(cadena[1]);
             }
-
             else {
                 int dato= Integer.parseInt((String)arg);
                 System.out.println("Observer "+dato);

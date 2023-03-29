@@ -13,6 +13,7 @@
 
 <AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="1294.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
    <children>
+      <Circle fx:id="waiter1" fill="WHITE" layoutX="1032.0" layoutY="129.0" radius="15.0" stroke="#ae747400" strokeType="INSIDE" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="131.0" layoutX="765.0" layoutY="414.0" stroke="#ffffff75" strokeType="INSIDE" strokeWidth="2.0" style="-fx-stroke-dash-array: 2 12 12 2;" width="131.0" />
       <Button fx:id="btnInit" layoutX="43.0" layoutY="603.0" mnemonicParsing="false" onAction="#IniciarAnimacion" style="-fx-background-color: yellowgreen; -fx-background-radius: 30;" text="Iniciar" textFill="WHITE" />
       <Button fx:id="BtnSalir" layoutX="119.0" layoutY="603.0" mnemonicParsing="false" onAction="#Finalizar" style="-fx-background-color: red; -fx-background-radius: 30;" text="Terminar" textFill="WHITE" />
@@ -446,35 +447,5 @@
             <Image url="@Resource/img/Decoration_Plant.png" />
          </image>
       </ImageView>
-      <Circle fx:id="waiter1" fill="WHITE" layoutX="1032.0" layoutY="260.0" radius="15.0" stroke="#ae747400" strokeType="INSIDE" />
-      <Label fx:id="lblwaiter2" layoutX="982.0" layoutY="177.0" prefHeight="18.0" prefWidth="100.0" />
-      <ImageView fitHeight="74.0" fitWidth="41.0" layoutX="1013.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Resource/img/Waiter.png" />
-         </image>
-      </ImageView>
-      <Circle fx:id="waiter2" fill="WHITE" layoutX="1032.0" layoutY="386.0" radius="15.0" stroke="#ae747400" strokeType="INSIDE" />
-      <Label fx:id="lblwaiter3" layoutX="982.0" layoutY="303.0" prefHeight="18.0" prefWidth="100.0" />
-      <ImageView fitHeight="74.0" fitWidth="41.0" layoutX="1013.0" layoutY="338.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Resource/img/Waiter.png" />
-         </image>
-      </ImageView>
-      <Circle fx:id="waiter3" fill="WHITE" layoutX="1032.0" layoutY="528.0" radius="15.0" stroke="#ae747400" strokeType="INSIDE" />
-      <Label fx:id="lblwaiter5" layoutX="982.0" layoutY="573.0" prefHeight="18.0" prefWidth="100.0" />
-      <ImageView fitHeight="74.0" fitWidth="41.0" layoutX="1013.0" layoutY="480.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Resource/img/Waiter.png" />
-         </image>
-      </ImageView>
-      <Circle fx:id="waiter5" fill="WHITE" layoutX="1032.0" layoutY="642.0" radius="15.0" stroke="#ae747400" strokeType="INSIDE" />
-      <ImageView fitHeight="74.0" fitWidth="41.0" layoutX="1023.0" layoutY="605.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Resource/img/Waiter.png" />
-         </image>
-      </ImageView>
-      <Label fx:id="lblwaiter1" layoutX="992.0" layoutY="59.0" prefHeight="18.0" prefWidth="100.0" />
-      <Label fx:id="lblwaiter4" layoutX="982.0" layoutY="456.0" prefHeight="18.0" prefWidth="100.0" />
-      <Label fx:id="lblwaiter5" layoutX="992.0" layoutY="573.0" prefHeight="18.0" prefWidth="100.0" />
    </children>
 </AnchorPane>

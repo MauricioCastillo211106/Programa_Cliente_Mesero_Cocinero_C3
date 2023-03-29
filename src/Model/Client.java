@@ -108,16 +108,11 @@ public class Client implements Runnable{
             transition3.setCycleCount(1);
         });
 
-        for (int i = 0; i < 5; i++) {
 
-            Platform.runLater(() -> {
-                transition3.setToX(imageView.getLayoutX() + 500);
-                transition3.play();
-                transition3.setOnFinished(event -> imageView.setOpacity(1));
-            });
-        }
        restaurant.salir(numMesa);
-
+        Platform.runLater(() -> {
+            anchor.getChildren().remove(imageView);
+        });
 
 
     }
