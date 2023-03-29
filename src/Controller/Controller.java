@@ -38,7 +38,19 @@ public class Controller implements Observer {
     private Label txtPercentage;
 
     @FXML
-    private Label lblwaiter;
+    private Label lblwaiter1;
+
+    @FXML
+    private Label lblwaiter2;
+
+    @FXML
+    private Label lblwaiter3;
+
+    @FXML
+    private Label lblwaiter4;
+
+    @FXML
+    private Label lblwaiter5;
 
 
 
@@ -52,21 +64,38 @@ public class Controller implements Observer {
     @FXML
     void IniciarAnimacion(ActionEvent event) {
         btnInit.setDisable(true);
-        txtPercentage.setText("0 %");
+        txtPercentage.setText("0");
         progressBarTotal.setProgress(0);
         System.out.println("Inicio de animacion");
         Restaurant restaurant = new Restaurant();
         restaurant.addObserver(this);
+
         Waiter waiter =new Waiter(anchor, restaurant);
+        Thread hiloWaiter = new Thread(waiter);
+        hiloWaiter.setDaemon(true);
+        hiloWaiter.start();
+
+
+        Thread hiloWaiter2 = new Thread(waiter);
+        hiloWaiter2.setDaemon(true);
+        hiloWaiter2.start();
+
+        Thread hiloWaiter3 = new Thread(waiter);
+        hiloWaiter3.setDaemon(true);
+        hiloWaiter3.start();
+
+        Thread hiloWaiter4 = new Thread(waiter);
+        hiloWaiter4.setDaemon(true);
+        hiloWaiter4.start();
+
         Receptionist receptionist =new Receptionist(restaurant);
         Chef chef = new Chef(restaurant);
         CreateClient createClient = new CreateClient(anchor, restaurant, this);
-        Thread hiloWaiter = new Thread(waiter);
+
         Thread hiloReceptionist = new Thread(receptionist);
         Thread hiloChef = new Thread(chef);
         Thread hiloCreateClient = new Thread(createClient);
-        hiloWaiter.setDaemon(true);
-        hiloWaiter.start();
+
         hiloReceptionist.setDaemon(true);
         hiloReceptionist.start();
         hiloChef.setDaemon(true);
@@ -83,10 +112,10 @@ public class Controller implements Observer {
             if (((String)arg).contains("ocupadoMesero")){
                 String[] cadena = ((String) arg).split(" ");
                 int numMesa = Integer.parseInt(cadena[1]);
-                Platform.runLater(()-> lblwaiter.setText("Atendiendo: "+(numMesa+1)));
+                Platform.runLater(()-> lblwaiter1.setText("Atendiendo: "+(numMesa+1)));
             }else
             if (((String)arg).contains("libreMesero")){
-                Platform.runLater(()-> lblwaiter.setText(""));
+                Platform.runLater(()-> lblwaiter1.setText(""));
             }else
             if (((String)arg).contains("ocupado")){
             }else if(((String)arg).contains("libre")){
@@ -95,6 +124,7 @@ public class Controller implements Observer {
                 String[] cadena = ((String) arg).split(" ");
                 int numMesa = Integer.parseInt(cadena[1]);
             }
+
             else {
                 int dato= Integer.parseInt((String)arg);
                 System.out.println("Observer "+dato);

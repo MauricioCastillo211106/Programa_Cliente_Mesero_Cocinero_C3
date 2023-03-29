@@ -33,7 +33,7 @@
       <Rectangle fx:id="table2" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="570.0" layoutY="73.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
       <Text fill="WHITE" layoutX="808.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COCINA" textAlignment="CENTER" wrappingWidth="6.64404296875" />
       <Circle fx:id="chef" fill="WHITE" layoutX="1226.0" layoutY="324.0" radius="15.0" stroke="#ffffff00" strokeType="INSIDE" />
-      <Text fill="WHITE" layoutX="776.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Área Reservada">
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Área Reservada">
          <font>
             <Font name="Dosis ExtraLight" size="19.0" />
          </font>
@@ -44,8 +44,8 @@
             <Font name="Dosis ExtraLight" size="19.0" />
          </font>
       </Text>
-      <Circle fx:id="waiter" fill="WHITE" layoutX="1032.0" layoutY="359.0" radius="15.0" stroke="#ae747400" strokeType="INSIDE" />
-      <Label fx:id="lblwaiter" layoutX="982.0" layoutY="277.0" prefHeight="18.0" prefWidth="100.0" />
+      <Circle fx:id="waiter" fill="WHITE" layoutX="1032.0" layoutY="132.0" radius="15.0" stroke="#ae747400" strokeType="INSIDE" />
+      <Label fx:id="lblwaiter1" layoutX="982.0" layoutY="49.0" prefHeight="18.0" prefWidth="100.0" />
       <ImageView fitHeight="69.0" fitWidth="94.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Resource/img/Pizza_Cutter.png" />
@@ -221,7 +221,7 @@
             <Image url="@Resource/img/chef.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="74.0" fitWidth="41.0" layoutX="1013.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="74.0" fitWidth="41.0" layoutX="1013.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Resource/img/Waiter.png" />
          </image>
@@ -446,5 +446,35 @@
             <Image url="@Resource/img/Decoration_Plant.png" />
          </image>
       </ImageView>
+      <Circle fx:id="waiter1" fill="WHITE" layoutX="1032.0" layoutY="260.0" radius="15.0" stroke="#ae747400" strokeType="INSIDE" />
+      <Label fx:id="lblwaiter2" layoutX="982.0" layoutY="177.0" prefHeight="18.0" prefWidth="100.0" />
+      <ImageView fitHeight="74.0" fitWidth="41.0" layoutX="1013.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Waiter.png" />
+         </image>
+      </ImageView>
+      <Circle fx:id="waiter2" fill="WHITE" layoutX="1032.0" layoutY="386.0" radius="15.0" stroke="#ae747400" strokeType="INSIDE" />
+      <Label fx:id="lblwaiter3" layoutX="982.0" layoutY="303.0" prefHeight="18.0" prefWidth="100.0" />
+      <ImageView fitHeight="74.0" fitWidth="41.0" layoutX="1013.0" layoutY="338.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Waiter.png" />
+         </image>
+      </ImageView>
+      <Circle fx:id="waiter3" fill="WHITE" layoutX="1032.0" layoutY="528.0" radius="15.0" stroke="#ae747400" strokeType="INSIDE" />
+      <Label fx:id="lblwaiter5" layoutX="982.0" layoutY="573.0" prefHeight="18.0" prefWidth="100.0" />
+      <ImageView fitHeight="74.0" fitWidth="41.0" layoutX="1013.0" layoutY="480.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Waiter.png" />
+         </image>
+      </ImageView>
+      <Circle fx:id="waiter5" fill="WHITE" layoutX="1032.0" layoutY="642.0" radius="15.0" stroke="#ae747400" strokeType="INSIDE" />
+      <ImageView fitHeight="74.0" fitWidth="41.0" layoutX="1023.0" layoutY="605.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/img/Waiter.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblwaiter1" layoutX="992.0" layoutY="59.0" prefHeight="18.0" prefWidth="100.0" />
+      <Label fx:id="lblwaiter4" layoutX="982.0" layoutY="456.0" prefHeight="18.0" prefWidth="100.0" />
+      <Label fx:id="lblwaiter5" layoutX="992.0" layoutY="573.0" prefHeight="18.0" prefWidth="100.0" />
    </children>
 </AnchorPane>

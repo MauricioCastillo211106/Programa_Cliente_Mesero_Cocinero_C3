@@ -17,7 +17,7 @@ public class Restaurant extends Observable {
     public int maxnumClient;
     public boolean[] tables;
     public int tableAux;
-
+ 
     public Restaurant(){
         VIP=false;
         reservation = true;
@@ -38,44 +38,20 @@ public class Restaurant extends Observable {
         }
     }
 
-/*    public synchronized boolean reserved(String nombre){
-        //Para el hilo cliente
-        synchronized (this) {
-            if(reservation){
-                System.out.println("reserved por "+nombre);
-                reservation =false;
-                reserved = nombre;
-                try {
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                return true;
-            }
-            else {
-                return false;
-            }
-        }
-    }*/
 
     public int entry(String nombre){
         int numMesa = -1;
         try {
-            if(reserved.equals(nombre)){
-                confirm = false;
-                numMesa = 20;
-                tableAux = 20;
-            }else{
                 synchronized (this) {
                     numClient++;
                     maxnumClient++;
-                    while (maxnumClient==20) {
+                    while (maxnumClient == 20) {
                         wait();
                     }
-                    Access=true;
-                    client=true;
-                    for (int i=0; i<20; i++) {
-                        if(!tables[i]) {
+                    Access = true;
+                    client = true;
+                    for (int i = 0; i < 20; i++) {
+                        if (!tables[i]) {
                             numMesa = i;
                             tableAux = i;
                             tables[i] = true;
@@ -83,18 +59,19 @@ public class Restaurant extends Observable {
                         }
                     }
                 }
-            }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         setChanged();
         notifyObservers("seat " + numMesa);
+        System.out.println(numMesa);
         return numMesa;
     }
-    public void ordenar(){
+    public int ordenar(){
         synchronized (this) {
             order++;
             notifyAll();
+            return order - 1;
         }
     }
 
@@ -121,7 +98,7 @@ public class Restaurant extends Observable {
         }
         if (aux){
             try {
-                Thread.sleep(10);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -153,7 +130,8 @@ public class Restaurant extends Observable {
             wait();
         }
         food--;
-        Thread.sleep(1000);
+        Thread.sleep(5000
+        );
     }
 
     public void salir(int numMesaLibre){

@@ -1,7 +1,10 @@
 package Functions;
 
+import Model.Client;
 import Model.Restaurant;
 import javafx.scene.layout.AnchorPane;
+
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Waiter implements Runnable{
     private Restaurant restaurant;
@@ -10,8 +13,10 @@ public class Waiter implements Runnable{
         this.restaurant=restaurant;
         this.padre=padre;
     }
+
     @Override
     public void run() {
+
 
         while (true){
             restaurant.servicioOrden();
