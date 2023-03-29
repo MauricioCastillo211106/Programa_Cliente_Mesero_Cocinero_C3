@@ -52,7 +52,7 @@ public class Client implements Runnable{
 
         for (int i = 0; i < 5; i++) {
             try {
-                Thread.sleep(500);
+                Thread.sleep(200);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -74,11 +74,6 @@ public class Client implements Runnable{
             imageView.setLayoutY(Integer.parseInt(layout[1]) + 20);
         });
 
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
 
 

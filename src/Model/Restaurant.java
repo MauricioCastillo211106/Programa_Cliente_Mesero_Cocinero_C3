@@ -69,35 +69,33 @@ public class Restaurant extends Observable {
         }
     }
 
-    public void servicioOrden(){
-        String txt;
-        boolean aux = false;
+    public void servicioOrden() {
         synchronized (this) {
-            if (order<=0){
-                txt = "libreMesero";
+            if (order <= 0) {
                 try {
                     wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-            }else{
-                aux = true;
-                txt = "ocupadoMesero";
-                peticiones++;
+                notifyAll();
+                setChanged();
+                notifyObservers("libreMesero " + tableAux);
+            } else {
                 order--;
-            }
-            notifyAll();
-            setChanged();
-            notifyObservers(txt +" "+ tableAux);
-        }
-        if (aux){
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                peticiones++;
+                notifyAll();
+                setChanged();
+                notifyObservers("ocupadoMesero " + tableAux);
+                try {
+                    Thread.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
+
+
 
     public void cocinar() {
         boolean notify = false;
@@ -124,7 +122,7 @@ public class Restaurant extends Observable {
             wait();
         }
         food--;
-        Thread.sleep(4000
+        Thread.sleep(6000
         );
     }
 

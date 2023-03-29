@@ -25,7 +25,7 @@ public class CreateClient extends Random implements Runnable{
             Thread Hcliente = new Thread(client);
             Hcliente.setName("Client "+(i+1));
             try {
-                Thread.sleep(ThreadLocalRandom.current().nextInt(6000));
+                Thread.sleep(ThreadLocalRandom.current().nextInt(8000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

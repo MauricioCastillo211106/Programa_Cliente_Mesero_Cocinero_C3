@@ -13,8 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
+
 
 import java.util.Observable;
 import java.util.Observer;
@@ -39,10 +38,6 @@ public class Controller implements Observer {
 
     @FXML
     private Label lblwaiter1;
-
-
-
-
 
 
     @FXML
