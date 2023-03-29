@@ -14,7 +14,6 @@
 <AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="1294.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
    <children>
       <Circle fx:id="waiter1" fill="WHITE" layoutX="1032.0" layoutY="129.0" radius="15.0" stroke="#ae747400" strokeType="INSIDE" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="131.0" layoutX="765.0" layoutY="414.0" stroke="#ffffff75" strokeType="INSIDE" strokeWidth="2.0" style="-fx-stroke-dash-array: 2 12 12 2;" width="131.0" />
       <Button fx:id="btnInit" layoutX="43.0" layoutY="603.0" mnemonicParsing="false" onAction="#IniciarAnimacion" style="-fx-background-color: yellowgreen; -fx-background-radius: 30;" text="Iniciar" textFill="WHITE" />
       <Button fx:id="BtnSalir" layoutX="119.0" layoutY="603.0" mnemonicParsing="false" onAction="#Finalizar" style="-fx-background-color: red; -fx-background-radius: 30;" text="Terminar" textFill="WHITE" />
       <ProgressBar fx:id="progressBarTotal" layoutX="110.0" layoutY="56.0" prefHeight="18.0" prefWidth="291.0" progress="0.0" />
@@ -32,7 +31,6 @@
       <Rectangle fx:id="table1" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="474.0" layoutY="73.0" stroke="#ffffff00" strokeType="INSIDE" width="66.0" />
       <Rectangle fx:id="table5" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="475.0" layoutY="156.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
       <Rectangle fx:id="table2" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="50.0" layoutX="570.0" layoutY="73.0" stroke="#ffffff00" strokeType="INSIDE" width="65.0" />
-      <Text fill="WHITE" layoutX="808.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COCINA" textAlignment="CENTER" wrappingWidth="6.64404296875" />
       <Circle fx:id="chef" fill="WHITE" layoutX="1226.0" layoutY="324.0" radius="15.0" stroke="#ffffff00" strokeType="INSIDE" />
       <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Área Reservada">
          <font>
@@ -40,7 +38,7 @@
          </font>
       </Text>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a4988e" height="200.0" layoutX="317.0" layoutY="231.0" stroke="TRANSPARENT" strokeType="INSIDE" width="30.0" />
-      <Text fill="WHITE" layoutX="63.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clientes">
+      <Text layoutX="63.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clientes">
          <font>
             <Font name="Dosis ExtraLight" size="19.0" />
          </font>

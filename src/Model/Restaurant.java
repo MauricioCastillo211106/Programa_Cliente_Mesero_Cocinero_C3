@@ -36,14 +36,14 @@ public class Restaurant extends Observable {
     public synchronized int entry(String nombre){
         int numMesa = -1;
         try {
-            while (maxnumClient == 20) {
+            while (maxnumClient > 20) {
                 wait();
             }
             numClient++;
             maxnumClient++;
             Access = true;
             client = true;
-            for (int i = 0; i < 20; i++) {
+            for (int i = 0; i < 21; i++) {
                 if (!tables[i]) {
                     numMesa = i;
                     tableAux = i;
@@ -124,7 +124,7 @@ public class Restaurant extends Observable {
             wait();
         }
         food--;
-        Thread.sleep(5000
+        Thread.sleep(4000
         );
     }
 
